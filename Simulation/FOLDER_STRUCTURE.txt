@@ -1,0 +1,11 @@
+Simulation
+|- include
+|- src
+	|- include (PrecisionDouble.h)
+		|- definition (PrecisionDouble.cpp)
+	|- core
+		|- main.cpp
+		|- GUI
+		|- UI
+		|- Calculations
+|- ressources
