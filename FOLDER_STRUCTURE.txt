@@ -4,8 +4,7 @@ Simulation
 	|- include (PrecisionDouble.h)
 		|- definition (PrecisionDouble.cpp)
 	|- core
-		|- main.cpp
-		|- GUI
-		|- UI
-		|- Calculations
+		|- Simulation.cpp
+		|- gui
+		|- logic
 |- ressources
