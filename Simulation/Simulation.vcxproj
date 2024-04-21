@@ -128,12 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Simulation.cpp" />
-    <ClCompile Include="src\include\definition\PrecisionDouble.cpp" />
+    <ClCompile Include="src\include\algebra\definition\PrecisionDouble.cpp" />
+    <ClCompile Include="src\include\geometry\definition\Point3D.cpp" />
+    <ClCompile Include="src\include\geometry\definition\Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\include\Point3D.h" />
-    <ClInclude Include="src\include\PrecisionDouble.h" />
-    <ClInclude Include="src\include\Vector3D.h" />
+    <ClInclude Include="src\include\geometry\Point3D.h" />
+    <ClInclude Include="src\include\algebra\PrecisionDouble.h" />
+    <ClInclude Include="src\include\geometry\Vector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

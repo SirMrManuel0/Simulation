@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/PrecisionDouble.h"
+#include "../include/algebra/PrecisionDouble.h"
 
 int main()
 {
