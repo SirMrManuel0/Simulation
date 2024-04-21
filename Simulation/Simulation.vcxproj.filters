@@ -15,11 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Simulation.cpp">
+    <ClCompile Include="core\Simulation.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="FOLDER_STRUCTURE.txt" />
   </ItemGroup>
 </Project>
