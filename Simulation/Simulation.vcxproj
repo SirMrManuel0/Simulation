@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="core\Simulation.cpp" />
+    <ClCompile Include="src\core\Simulation.cpp" />
+    <ClCompile Include="src\include\definition\PrecisionDouble.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\include\Point3D.h" />
+    <ClInclude Include="src\include\PrecisionDouble.h" />
+    <ClInclude Include="src\include\Vector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
