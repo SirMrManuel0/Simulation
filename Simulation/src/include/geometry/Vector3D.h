@@ -17,7 +17,7 @@ public:
 	double GetY() const;
 	double GetZ() const;
 	double Length() const;
-	static const enum AXIS { X, Y, Z };
+	enum AXIS { X, Y, Z };
 	Vector3D rotate(double Theta, AXIS axis) const;
 private:
 	double x, y, z;

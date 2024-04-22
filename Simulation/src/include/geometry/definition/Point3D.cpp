@@ -13,6 +13,18 @@ void Point3D::operator+= (Vector3D& vec)
 	y += vec.GetY();
 	z += vec.GetZ();
 }
+
+Point3D Point3D::operator- (Vector3D& vec) const
+{
+	return Point3D(x - vec.GetX(), y - vec.GetY(), z - vec.GetZ());
+}
+void Point3D::operator-= (Vector3D& vec)
+{
+	x -= vec.GetX();
+	y -= vec.GetY();
+	z -= vec.GetZ();
+}
+
 Vector3D Point3D::operator- (Point3D& p2) const
 {
 	return Vector3D(x - p2.GetX(), y - p2.GetY(), z - p2.GetZ());
