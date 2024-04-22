@@ -6,19 +6,4 @@
 
 int main()
 {
-    std::cout << "Hello World!\n" << std::endl;
-    PrecisionDouble test(1, 5);
-    std::cout << test.ToString() << std::endl;
-
-    Vector3D direction(1, 2, 3);
-    Point3D origin(3, 2, 1);
-    Point3D destination = origin - direction;
-
-    std::cout << "This needs to be reviewed!!" << std::endl;
-  
-    std::cout << "Hello" << std::endl;
-    std::cout << "Hello" << std::endl;
-
-    std::cout << "Hello" << std::endl;
-    std::cout << "Hello" << std::endl;
 }
