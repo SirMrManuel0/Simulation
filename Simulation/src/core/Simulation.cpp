@@ -15,7 +15,7 @@ int main()
     Point3D destination = origin - direction;
 
     std::cout << "This needs to be reviewed!!" << std::endl;
-
+  
     std::cout << "Hello" << std::endl;
     std::cout << "Hello" << std::endl;
 
