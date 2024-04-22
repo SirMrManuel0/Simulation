@@ -13,4 +13,5 @@ int main()
     Vector3D direction(1, 2, 3);
     Point3D origin(3, 2, 1);
     Point3D destination = origin - direction;
+
 }
