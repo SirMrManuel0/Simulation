@@ -4,6 +4,11 @@
 #include "../../../geometry/Vector3D.h"
 #include <vector>
 
+
+// consts
+Particle::CHARGE_E = PrecisionDouble(1.60217663, -19);
+Particle::LIGHTSPEED = PrecisionDouble(2.99792458, 8)
+
 void Particle::setLocation(Point3D& newLocation) {
 	// sets Location to the new one
 	this->Location = newLocation;
@@ -61,7 +66,7 @@ Vector3D Particle::getResultingForce() {
 
 // Getter
 PrecisionDouble Particle::getMass() {
-	return this->Mass;
+	return this->Mass; // in MeV/c^2
 }
 Point3D Particle::getLocation() {
 	return this->Location;
@@ -69,3 +74,6 @@ Point3D Particle::getLocation() {
 std::vector<Vector3D> Particle::getForces() {
 	return this->Forces;
 }
+int Particle::getKind()[
+	return this->Kind;
+]

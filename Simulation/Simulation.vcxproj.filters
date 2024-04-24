@@ -27,6 +27,24 @@
     <ClCompile Include="src\include\geometry\definition\Vector3D.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="src\include\physic\Particles\Quarks\definitions\UpQuark.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\physic\Particles\Quarks\definitions\DownQuark.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\physic\Particles\Quarks\definitions\CharmQuark.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\physic\Particles\Quarks\definitions\StrangeQuark.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\physic\Particles\Quarks\definitions\TopQuark.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\physic\Particles\Quarks\definitions\BottomQuark.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\include\algebra\PrecisionDouble.h">
@@ -36,6 +54,24 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="src\include\geometry\Point3D.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\physic\Particles\Quarks\UpQuark.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\physic\Particles\Quarks\DownQuark.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\physic\Particles\Quarks\CharmQuark.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\physic\Particles\Quarks\StrangeQuark.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\physic\Particles\Quarks\TopQuark.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\physic\Particles\Quarks\BottomQuark.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
