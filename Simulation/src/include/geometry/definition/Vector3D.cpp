@@ -1,10 +1,11 @@
 #include "../Vector3D.h"
+#include "../../algebra/PrecisionDouble.h"
 #include <cmath>
 #include <iostream>
 
 
-Vector3D::Vector3D() : x(0), y(0), z(0) {}
-Vector3D::Vector3D(double x, double y, double z) : x(x), y(y), z(z) {}
+Vector3D::Vector3D() : x(PrecisionDouble(0, 0)), y(PrecisionDouble(0, 0)), z(PrecisionDouble(0,0)) {}
+Vector3D::Vector3D(PrecisionDouble x, PrecisionDouble y, PrecisionDouble z) : x(x), y(y), z(z) {}
 
 Vector3D Vector3D::operator+ (Vector3D& vec2) const
 {
@@ -35,9 +36,21 @@ void Vector3D::operator-= (Vector3D& vec2)
 	z -= vec2.GetZ();
 }
 
-double Vector3D::operator* (Vector3D& vec2) const
+PrecisionDouble Vector3D::operator* (Vector3D& vec2) const
 {
 	return x * vec2.GetX() + y * vec2.GetY() + z * vec2.GetZ();
+}
+
+Vector3D Vector3D::operator* (PrecisionDouble scalar) const
+{
+	return Vector3D(x * scalar, y * scalar, z * scalar);
+}
+
+void Vector3D::operator*= (PrecisionDouble scalar)
+{
+	x *= scalar;
+	y *= scalar;
+	z *= scalar;
 }
 
 Vector3D Vector3D::operator* (double scalar) const
@@ -54,7 +67,12 @@ void Vector3D::operator*= (double scalar)
 
 bool Vector3D::operator|| (Vector3D& vec2) const
 {
-	return  x / vec2.GetX() == y / vec2.GetY() == z / vec2.GetZ();
+	PrecisionDouble xScalar = x / vec2.GetX();
+	PrecisionDouble yScalar = y / vec2.GetY();
+	PrecisionDouble zScalar = z / vec2.GetZ();
+	bool one = xScalar == yScalar;
+	bool two = yScalar == zScalar;
+	return  one && two;
 }
 
 bool Vector3D::operator== (Vector3D& vec2) const
@@ -62,16 +80,16 @@ bool Vector3D::operator== (Vector3D& vec2) const
 	return x == vec2.GetX() && y == vec2.GetY() && z == vec2.GetZ();
 }
 
-double Vector3D::Length() const
+PrecisionDouble Vector3D::Length() const
 {
-	return std::sqrt(x * x + y * y + z * z);
+	return PrecisionDouble(std::sqrt((x * x + y * y + z * z).ToDouble()),0);
 }
 
 Vector3D Vector3D::rotate(double Theta, AXIS axis) const
 {
 
 
-	long double n_x, n_y, n_z = 0;
+	PrecisionDouble n_x, n_y, n_z(0,0);
 
 	Theta = Theta * (3.141 / 180);
 
@@ -87,7 +105,7 @@ Vector3D Vector3D::rotate(double Theta, AXIS axis) const
 	{
 		n_x = x * cos(Theta) + z * sin(Theta);
 		n_y = y;
-		n_z = -(x * sin(Theta)) + z * cos(Theta);
+		n_z = PrecisionDouble(-1,0) * (x * sin(Theta)) + z * cos(Theta);
 	}
 	else if (axis == Vector3D::Z)
 	{
@@ -104,9 +122,9 @@ Vector3D Vector3D::rotate(double Theta, AXIS axis) const
 	return Vector3D(n_x, n_y, n_z);
 }
 
-double Vector3D::GetX() const { return x; }
-double Vector3D::GetY() const { return y; }
-double Vector3D::GetZ() const { return z; }
+PrecisionDouble Vector3D::GetX() const { return x; }
+PrecisionDouble Vector3D::GetY() const { return y; }
+PrecisionDouble Vector3D::GetZ() const { return z; }
 
 // vec2 = -vec
 // null - vect
